@@ -15,6 +15,9 @@ namespace wp8WlanLogger
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        const string LOGGING_ON = "ON";
+        const string LOGGING_OFF = "OFF";
+
         // Constructor
         public MainPage()
         {
@@ -36,25 +39,29 @@ namespace wp8WlanLogger
         private void onOff_Click(object sender, RoutedEventArgs e)
         {
             Button button = (Button) sender;
-            if (button.Content.Equals("ON"))
+            if (button.Content.Equals(LOGGING_ON))
             {
                 activateLogging(button);
             }
-            else
+            else if (button.Content.Equals(LOGGING_OFF))
             {
                 deactivateLogging(button);
+            }
+            else
+            {
+                throw new InvalidOperationException("The state of the Button is unknown: " + button.Content);
             }
 
         }
 
         private void deactivateLogging(Button button)
         {
-            button.Content = "ON";
+            button.Content = LOGGING_ON;
         }
 
         private void activateLogging(Button button)
         {
-            button.Content = "OFF";
+            button.Content = LOGGING_OFF;
         }
 
         private void Sync_Click(object sender, RoutedEventArgs e)
