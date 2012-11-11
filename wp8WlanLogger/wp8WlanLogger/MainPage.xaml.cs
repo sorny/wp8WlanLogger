@@ -8,6 +8,8 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using wp8WlanLogger.Resources;
+using Microsoft.Phone.Maps;
+
 
 namespace wp8WlanLogger
 {
@@ -20,6 +22,15 @@ namespace wp8WlanLogger
 
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
+        }
+        
+        // Placeholder code to contain the ApplicationID and AuthenticationToken
+        // that must be obtained online from the Windows Phone Dev Center
+        // before publishing an app that uses the Map control.
+        private void map_Loaded(object sender, RoutedEventArgs e)
+        {
+            MapsSettings.ApplicationContext.ApplicationId = "<applicationid>";
+            MapsSettings.ApplicationContext.AuthenticationToken = "<authenticationtoken>";
         }
 
         // Sample code for building a localized ApplicationBar
