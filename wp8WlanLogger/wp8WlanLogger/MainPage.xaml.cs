@@ -33,6 +33,35 @@ namespace wp8WlanLogger
             MapsSettings.ApplicationContext.AuthenticationToken = "<authenticationtoken>";
         }
 
+        private void onOff_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button) sender;
+            if (button.Content.Equals("ON"))
+            {
+                activateLogging(button);
+            }
+            else
+            {
+                deactivateLogging(button);
+            }
+
+        }
+
+        private void deactivateLogging(Button button)
+        {
+            button.Content = "ON";
+        }
+
+        private void activateLogging(Button button)
+        {
+            button.Content = "OFF";
+        }
+
+        private void Sync_Click(object sender, RoutedEventArgs e)
+        {
+            //sync
+        }
+
         // Sample code for building a localized ApplicationBar
         //private void BuildLocalizedApplicationBar()
         //{

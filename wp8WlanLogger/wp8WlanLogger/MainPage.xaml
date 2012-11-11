@@ -47,8 +47,8 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button x:Name="onOff" Content="ON" HorizontalAlignment="Center" Margin="80,10,238,0" VerticalAlignment="Top" Height="106" Width="130"/>
-            <Button x:Name="Sync" Content="Sync" HorizontalAlignment="Center" Margin="241,10,80,0" VerticalAlignment="Top" Height="106" Width="144"/>
+            <Button x:Name="onOff" Content="ON" HorizontalAlignment="Center" Margin="80,10,238,0" VerticalAlignment="Top" Height="106" Width="130" Click="onOff_Click"/>
+            <Button x:Name="Sync" Content="Sync" HorizontalAlignment="Center" Margin="241,10,80,0" VerticalAlignment="Top" Height="106" Width="144" Click="Sync_Click"/>
             <maps:Map x:Name="Map" Margin="0,121,0,0" LandmarksEnabled="False" Loaded="map_Loaded"/>
         </Grid>
 
